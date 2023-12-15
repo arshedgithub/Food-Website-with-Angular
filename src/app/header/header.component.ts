@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FoodService } from '../services/food/food.service';
 
 @Component({
   selector: 'app-header',
@@ -6,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
+
+  foods:String[] = [];
+
+  constructor(private foodService:FoodService){}
+
+  ngOnInit():void {
+    this.foods = this.foodService.getAll();
+  }
 
 }
