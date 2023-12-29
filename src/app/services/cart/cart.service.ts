@@ -13,7 +13,7 @@ export class CartService {
   addToCart(food: Food):void{
     let cartItem = this.cart.items.find(item => item.food.id == food.id);
     if (cartItem) {
-      this.changeQuantity(cartItem.food.id, cartItem.quantity);
+      this.changeQuantity(cartItem.food.id, cartItem.quantity + 1);
       return;
     } 
     this.cart.items.push(new CartItem(food))
