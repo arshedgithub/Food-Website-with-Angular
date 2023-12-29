@@ -16,10 +16,10 @@ export class CartPageComponent implements OnInit {
   constructor(private cartService:CartService, private foodService:FoodService){
     
     // temporary code to style cart page
-    let foods = this.foodService.getAll();
+    let foods = foodService.getAll();
     cartService.addToCart(foods[1]);
     cartService.addToCart(foods[3]);
-    cartService.addToCart(foods[6]);
+    cartService.addToCart(foods[4]);
     
     this.setCart();
   }
