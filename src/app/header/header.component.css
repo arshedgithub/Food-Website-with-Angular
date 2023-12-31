@@ -1,4 +1,5 @@
 header {
+    position: relative;
     background-color: white;
     padding: 0;
     border-bottom: 1px solid #e72929;
@@ -25,11 +26,40 @@ a.logo {
 }
 
 nav ul {
+    display: flex;
     list-style-type: none;
     margin: 0;
 }
 
-nav ul li a {
+nav ul a {
     padding: 1em;
     display: inline-block;
+}
+
+a span {
+    background-color: #ff4d4d;
+    color: white;
+    padding: 0.2rem 0.45rem;
+    border-radius: 100rem;
+    font-size: 0.9rem;
+}
+
+.menu-container {
+    position: relative;
+}
+
+.menu {
+    position: absolute;
+    z-index: 1;
+    background-color: whitesmoke;
+    display: none;
+}
+
+.menu-container:hover .menu {
+    display: block;
+}
+
+.menu a{
+    width: 100%;
+    min-width: 8rem;
 }
